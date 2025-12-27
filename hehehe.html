@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Aayu 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    :root {
+        --pink: #ff4d6d;
+        --pink-light: #ff85a1;
+        --pink-pale: #ffd1dc;
+        --pink-bg: #fff0f5;
+        --shadow: 0 20px 50px rgba(255, 77, 109, 0.3);
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--pink-pale), var(--pink-bg));
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Comic Sans MS', 'Poppins', 'Segoe UI', cursive;
+        position: relative;
+    }
+
+    /* Cute background pattern */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(var(--pink-light) 1px, transparent 1px),
+            radial-gradient(var(--pink-pale) 1px, transparent 1px);
+        background-size: 40px 40px, 60px 60px;
+        background-position: 0 0, 30px 30px;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 35px;
+        border-radius: 30px;
+        width: 90%;
+        max-width: 480px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        z-index: 2;
+        position: relative;
+        border: 3px solid var(--pink-pale);
+        backdrop-filter: blur(10px);
+        animation: containerPop 0.8s ease-out;
+    }
+
+    @keyframes containerPop {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    .message {
+        font-size: 19px;
+        color: var(--pink);
+        min-height: 130px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .question {
+        font-size: 26px;
+    margin: 15px 0 35px 0;
+    color: var(--pink);
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    font-weight: 800;
+        text-shadow: 0 2px 10px rgba(255, 77, 109, 0.2);
+        animation: heartBeat 2s infinite;
+        position: relative;
+        padding: 15px;
+        background: linear-gradient(135deg, rgba(255, 77, 109, 0.1), rgba(255, 133, 161, 0.1));
+        border-radius: 20px;
+        border: 2px dashed var(--pink-light);
+    }
+
+    @keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.7);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+    80% {
+        transform: translateY(5px) scale(0.95);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 50px; /* Space for message popup */
+    }
+
+    button {
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+        min-width: 140px;
+    }
+
+    button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+        transform: translateX(-100%);
+    }
+
+    button:hover::before {
+        animation: shine 1s forwards;
+    }
+
+    @keyframes shine {
+        to { transform: translateX(100%); }
+    }
+
+    #yes {
+        background: linear-gradient(135deg, var(--pink), var(--pink-light));
+        color: white;
+        box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+        animation: pulse 1.8s infinite, float 3s ease-in-out infinite;
+        z-index: 3;
+        padding: 18px 40px; /* Default padding */
+        font-size: 18px; /* Default font size */
+        transform-origin: center;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4); }
+        50% { transform: scale(1.08); box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6); }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    #yes:hover {
+        transform: scale(1.15) !important;
+        box-shadow: 0 20px 40px rgba(255, 77, 109, 0.7) !important;
+    }
+
+    #no {
+        background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+        color: #666;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        position: relative;
+        padding: 16px 35px; /* Default padding */
+        font-size: 18px; /* Default font size */
+        transform-origin: center;
+    }
+
+    #no:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    /* FLOATING HEARTS - IMPROVED */
+    .heart {
+        position: absolute;
+        bottom: -50px;
+        font-size: 24px;
+        pointer-events: none;
+        z-index: 1;
+        filter: drop-shadow(0 5px 15px rgba(255, 77, 109, 0.4));
+        animation: floatUp 8s linear infinite;
+        opacity: 0;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) rotate(0deg) scale(0.8);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-120vh) rotate(360deg) scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    /* CUTE MESSAGES WHEN CLICKING NO - FIXED POSITION */
+    .no-message {
+        position: absolute;
+        top: -70px; /* Position above buttons */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        font-size: 18px;
+        color: var(--pink);
+        font-weight: 700;
+        z-index: 100;
+        display: none;
+        animation: messagePop 0.5s ease-out;
+        border: 2px solid var(--pink-light);
+        text-align: center;
+        max-width: 90%;
+        white-space: nowrap;
+        min-width: 200px;
+    }
+
+    @keyframes messagePop {
+        0% { 
+            transform: translateX(-50%) scale(0.5); 
+            opacity: 0; 
+            top: -50px;
+        }
+        80% { 
+            transform: translateX(-50%) scale(1.1); 
+        }
+        100% { 
+            transform: translateX(-50%) scale(1); 
+            opacity: 1;
+            top: -70px;
+        }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 500px) {
+        .container {
+            padding: 25px 20px;
+            border-radius: 25px;
+        }
+        
+        .message {
+            font-size: 17px;
+            min-height: 110px;
+        }
+        
+        .question {
+    font-size: 24px;
+    color: #ff2f6e;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transform: translateY(-25px);
+}
+
+        
+        button {
+            min-width: 120px;
+            padding: 14px 25px !important;
+            font-size: 16px !important;
+        }
+        
+        .buttons {
+            gap: 15px;
+            min-height: 90px;
+        }
+        
+        .no-message {
+            top: -60px;
+            font-size: 16px;
+            padding: 12px 20px;
+            min-width: 160px;
+        }
+        
+        @keyframes messagePop {
+            0% { 
+                transform: translateX(-50%) scale(0.5); 
+                opacity: 0; 
+                top: -40px;
+            }
+            100% { 
+                transform: translateX(-50%) scale(1); 
+                opacity: 1;
+                top: -60px;
+            }
+        }
+    }
+
+    /* Celebration confetti */
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: var(--pink);
+        top: -10px;
+        opacity: 0;
+    }
+
+    /* Special class for when NO button is small */
+    .no-small {
+        transform: scale(0.7) !important;
+        opacity: 0.7;
+        padding: 12px 25px !important;
+        font-size: 16px !important;
+    }
+    
+    .no-very-small {
+        transform: scale(0.5) !important;
+        opacity: 0.5;
+        padding: 8px 20px !important;
+        font-size: 14px !important;
+    }
+    
+    .no-tiny {
+        transform: scale(0.3) !important;
+        opacity: 0.3;
+        padding: 5px 15px !important;
+        font-size: 12px !important;
+    }
+    
+    .no-disappear {
+        transform: scale(0.1) !important;
+        opacity: 0;
+        padding: 2px 10px !important;
+        font-size: 10px !important;
+        visibility: hidden;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="message" id="typeText"></div>
+
+    <div class="question">
+        Will you be my girlfriend? 💖
+    </div>
+
+    <div class="buttons">
+        <!-- Message will appear here -->
+        <div class="no-message" id="noMessage"></div>
+        
+        <button id="yes">Yes 💕</button>
+        <button id="no">No 💔</button>
+    </div>
+</div>
+
+<!-- Celebration container -->
+<div id="confettiContainer"></div>
+
+<script>
+    // Typewriter effect
+    const text = `Hey Aayu 💛
+From our very first message,
+talking to you and spending time with you
+became the happiest part of my day😚
+Every message, every little moment
+brings a smile to my face 🤭
+
+Your sweetness, your eyes, your energy,
+your smile Ahhhhh— everything about you
+just feels perfect ✨
+
+And somewhere in between all of that…
+I fell 💕
+I fell soooo hard for you… sooooo 
+I like you… I really, really like you
+No… I love you ❤️
+
+So I have just one question… 💖
+`;
+
+    let i = 0;
+    const speed = 40;
+    const typeDiv = document.getElementById("typeText");
+
+    function typeWriter() {
+        if (i < text.length) {
+            // Add cute cursor
+            let cursor = document.querySelector('.typewriter-cursor');
+            if (!cursor) {
+                cursor = document.createElement('span');
+                cursor.className = 'typewriter-cursor';
+                cursor.style.cssText = `
+                    display: inline-block;
+                    width: 3px;
+                    height: 1.2em;
+                    background: #ff4d6d;
+                    margin-left: 2px;
+                    vertical-align: middle;
+                    animation: blink 1s infinite;
+                `;
+                typeDiv.appendChild(cursor);
+            }
+
+            typeDiv.removeChild(cursor);
+            typeDiv.innerHTML += text.charAt(i);
+            typeDiv.appendChild(cursor);
+            
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+    const cursor = document.querySelector('.typewriter-cursor');
+    if (cursor) cursor.remove();
+
+    // Show question after typing ends
+    const question = document.querySelector('.question');
+    question.style.opacity = "1";
+    question.style.animation = "bounceIn 0.8s ease-out forwards";
+}
+    }
+
+    // Start typing after a short delay
+    setTimeout(typeWriter, 800);
+
+    // Floating hearts with more variety
+    const heartEmojis = ["❤️", "💕", "💖", "💗", "💓", "💘", "💝", "💞", "🧡", "💛", "💚", "💙", "💜"];
+    
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 25 + 20) + "px";
+        heart.style.animationDelay = Math.random() * 3 + "s";
+        heart.style.animationDuration = (Math.random() * 4 + 6) + "s";
+        
+        // Random color for some hearts
+        if (Math.random() > 0.7) {
+            const colors = ["#ff4d6d", "#ff85a1", "#ff2f6e", "#ffb6c1"];
+            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 9000);
+    }
+
+    // Create initial hearts
+    for (let j = 0; j < 15; j++) {
+        setTimeout(createHeart, j * 300);
+    }
+    
+    // Continue creating hearts
+    setInterval(createHeart, 800);
+
+    // NO button logic
+    let noClicks = 0;
+    const maxNoClicks = 5;
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const noMessage = document.getElementById("noMessage");
+    
+    // Messages for NO clicks
+    const noMessages = [
+        "Are you sure? 🥺",
+        "Think about it again! 💭",
+        "But we will be perfect together! 💞",
+        "Pretty please? 🥺",
+    ];
+
+    noBtn.onclick = () => {
+        noClicks++;
+        
+        // Make YES button larger
+        const yesScale = 1 + (noClicks * 0.25);
+        yesBtn.style.transform = `scale(${yesScale})`;
+        yesBtn.style.padding = `${18 + (noClicks * 4)}px ${40 + (noClicks * 8)}px`;
+        yesBtn.style.fontSize = `${18 + (noClicks * 2)}px`;
+        
+        // Make NO button smaller
+        let noScale = 1 - (noClicks * 0.15);
+        if (noScale < 0.1) noScale = 0.1;
+        
+        // Apply different classes based on click count
+        noBtn.classList.remove("no-small", "no-very-small", "no-tiny", "no-disappear");
+        
+        if (noClicks === 1) {
+            noBtn.classList.add("no-small");
+        } else if (noClicks === 2) {
+            noBtn.classList.add("no-very-small");
+        } else if (noClicks === 3) {
+            noBtn.classList.add("no-tiny");
+        } else if (noClicks >= 4) {
+            noBtn.classList.add("no-disappear");
+        } else {
+            noBtn.style.transform = `scale(${noScale})`;
+        }
+        
+        // Show cute message
+        const messageIndex = Math.min(noClicks - 1, noMessages.length - 1);
+        noMessage.textContent = noMessages[messageIndex];
+        noMessage.style.display = 'block';
+        
+        // Hide message after 1.5 seconds
+        setTimeout(() => {
+            noMessage.style.display = 'none';
+        }, 1500);
+        
+        // Create confetti on NO click
+        createConfetti();
+        
+        // Remove NO button after max clicks
+        if (noClicks >= maxNoClicks) {
+            // Final transformation
+            yesBtn.style.transform = `scale(2.5)`;
+            yesBtn.style.padding = "30px 60px";
+            yesBtn.style.fontSize = "28px";
+            
+            // Show final message
+            setTimeout(() => {
+                noMessage.textContent = "Yayayayaya! 💖";
+                noMessage.style.display = 'block';
+                setTimeout(() => {
+                    noMessage.style.display = 'none';
+                }, 2000);
+            }, 500);
+        }
+        
+        // Add vibration if supported
+        if (navigator.vibrate) {
+            navigator.vibrate(50);
+        }
+    };
+
+    // YES button logic
+    yesBtn.onclick = () => {
+        // Celebration!
+        createCelebration();
+        
+        // Show success message
+        noMessage.textContent = "Yayayayaya! 🎉😘";
+        noMessage.style.color = "#4CAF50";
+        noMessage.style.borderColor = "#4CAF50";
+        noMessage.style.display = 'block';
+        
+        // Disable buttons
+        yesBtn.disabled = true;
+        noBtn.disabled = true;
+        
+        // Big celebration after 1 second
+        setTimeout(() => {
+            // Redirect to yes.html
+            window.location.href = "yes.html";
+        }, 2000);
+    };
+
+    // Create confetti effect
+    function createConfetti() {
+        const container = document.getElementById('confettiContainer');
+        const colors = ['#ff4d6d', '#ff85a1', '#ff2f6e', '#ffb6c1', '#ffd166', '#06d6a0', '#118ab2', '#ef476f'];
+        
+        for (let i = 0; i < 20; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.width = Math.random() * 10 + 5 + 'px';
+            confetti.style.height = Math.random() * 10 + 5 + 'px';
+            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+            
+            container.appendChild(confetti);
+            
+            // Animate
+            const animation = confetti.animate([
+                {
+                    transform: 'translateY(0) rotate(0deg)',
+                    opacity: 1
+                },
+                {
+                    transform: `translateY(${Math.random() * 200 + 100}px) 
+                                translateX(${Math.random() * 100 - 50}px) 
+                                rotate(${Math.random() * 360}deg)`,
+                    opacity: 0
+                }
+            ], {
+                duration: Math.random() * 800 + 800,
+                easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+            });
+            
+            animation.onfinish = () => confetti.remove();
+        }
+    }
+
+    // Create big celebration for YES
+    function createCelebration() {
+        const container = document.getElementById('confettiContainer');
+        const colors = ['#ff4d6d', '#ff85a1', '#ff2f6e', '#4CAF50', '#8BC34A', '#FFD700', '#FF6B6B', '#4ECDC4'];
+        
+        // Lots of confetti
+        for (let i = 0; i < 80; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 15 + 5 + 'px';
+                confetti.style.height = Math.random() * 15 + 5 + 'px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                container.appendChild(confetti);
+                
+                // Animate
+                const animation = confetti.animate([
+                    {
+                        transform: 'translateY(0) rotate(0deg) scale(1)',
+                        opacity: 1
+                    },
+                    {
+                        transform: `translateY(${Math.random() * 400 + 150}px) 
+                                    translateX(${Math.random() * 200 - 100}px) 
+                                    rotate(${Math.random() * 720}deg)
+                                    scale(${Math.random() * 0.5 + 0.5})`,
+                        opacity: 0
+                    }
+                ], {
+                    duration: Math.random() * 1500 + 1000,
+                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                });
+                
+                animation.onfinish = () => confetti.remove();
+            }, i * 15);
+        }
+        
+        // Add big hearts
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '💖';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = '35px';
+                heart.style.color = colors[Math.floor(Math.random() * 4)];
+                heart.style.zIndex = '1000';
+                heart.style.animationDuration = '3s';
+                
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }, i * 80);
+        }
+    }
+
+    // Add CSS for cursor animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+</body>
+</html>
